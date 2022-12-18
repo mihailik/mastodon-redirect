@@ -1,1 +1,18 @@
-!
+<h1></h1>
+<script>
+var slash = String.fromCharCode(47);
+var a = document.createElement('a');
+a.href = 
+  location.protocol.slice(0, 4) + 's:' + slash + slash +
+  ['mastodon', 'green'].join('.') + slash + '@' +
+  '486timetable';
+  a.innerHTML = 'Oleg Mihailik';
+
+document.getElementsByTagName('h1')[0].appendChild(a);
+  setTimeout(function () {
+    a.click();
+  }, 100); 
+  setTimeout(function() {
+  window.location = a.href;
+}, 300);
+</script>
